@@ -1,0 +1,225 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+        "metadata",
+        "phases",
+        "dependencies",
+        "notes",
+        "updates"
+    ],
+    "properties": {
+        "metadata": {
+            "type": "object",
+            "required": [
+                "project_name",
+                "description",
+                "tech_stack"
+            ],
+            "properties": {
+                "project_name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "tech_stack": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "target_audience": {
+                    "type": "string"
+                },
+                "integration_points": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "phases": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "name",
+                    "purpose"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "purpose": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "tasks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "name",
+                    "description",
+                    "priority",
+                    "status"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "priority": {
+                        "type": "string",
+                        "enum": [
+                            "critical",
+                            "high",
+                            "medium",
+                            "low"
+                        ]
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "pending",
+                            "in-progress",
+                            "completed",
+                            "blocked"
+                        ]
+                    },
+                    "dependencies": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "references": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "dependencies": {
+            "type": "object",
+            "properties": {
+                "external_projects": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "project",
+                            "description",
+                            "required_for"
+                        ],
+                        "properties": {
+                            "project": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "required_for": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "external_services": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "service",
+                            "description",
+                            "required_for"
+                        ],
+                        "properties": {
+                            "service": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "required_for": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "api_docs": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "notes": {
+            "type": "object",
+            "properties": {
+                "best_practices": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "technical_guidelines": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "design_principles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "performance_targets": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "updates": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "date",
+                    "status",
+                    "notes"
+                ],
+                "properties": {
+                    "date": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "notes": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
