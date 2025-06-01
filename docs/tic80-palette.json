@@ -1,0 +1,214 @@
+{
+    "name": "SWEETIE-16",
+    "description": "The default TIC-80 palette by GrafxKid - 16 carefully chosen colors for retro-style graphics with excellent contrast and versatility",
+    "author": "GrafxKid",
+    "colors": [
+        {
+            "index": 0,
+            "name": "Black",
+            "hex": "#1a1c2c",
+            "rgb": [
+                26,
+                28,
+                44
+            ],
+            "usage": "Backgrounds, borders, text"
+        },
+        {
+            "index": 1,
+            "name": "Purple",
+            "hex": "#5d275d",
+            "rgb": [
+                93,
+                39,
+                93
+            ],
+            "usage": "Errors, no data states, critical alerts"
+        },
+        {
+            "index": 2,
+            "name": "Red",
+            "hex": "#b13e53",
+            "rgb": [
+                177,
+                62,
+                83
+            ],
+            "usage": "Critical errors, alerts, down states"
+        },
+        {
+            "index": 3,
+            "name": "Orange",
+            "hex": "#ef7d57",
+            "rgb": [
+                239,
+                125,
+                87
+            ],
+            "usage": "Warnings, caution states"
+        },
+        {
+            "index": 4,
+            "name": "Yellow",
+            "hex": "#ffcd75",
+            "rgb": [
+                255,
+                205,
+                117
+            ],
+            "usage": "Warnings, attention needed"
+        },
+        {
+            "index": 5,
+            "name": "Lime",
+            "hex": "#a7f070",
+            "rgb": [
+                167,
+                240,
+                112
+            ],
+            "usage": "Success, healthy states, positive trends"
+        },
+        {
+            "index": 6,
+            "name": "Green",
+            "hex": "#38b764",
+            "rgb": [
+                56,
+                183,
+                100
+            ],
+            "usage": "Normal operation, input/inbound data"
+        },
+        {
+            "index": 7,
+            "name": "Dark Cyan",
+            "hex": "#257179",
+            "rgb": [
+                37,
+                113,
+                121
+            ],
+            "usage": "Secondary data, headers"
+        },
+        {
+            "index": 8,
+            "name": "Dark Blue",
+            "hex": "#29366f",
+            "rgb": [
+                41,
+                54,
+                111
+            ],
+            "usage": "Background accents, inactive states"
+        },
+        {
+            "index": 9,
+            "name": "Blue",
+            "hex": "#3b5dc9",
+            "rgb": [
+                59,
+                93,
+                201
+            ],
+            "usage": "Information, output/outbound data"
+        },
+        {
+            "index": 10,
+            "name": "Light Blue",
+            "hex": "#41a6f6",
+            "rgb": [
+                65,
+                166,
+                246
+            ],
+            "usage": "Active states, highlights"
+        },
+        {
+            "index": 11,
+            "name": "Cyan",
+            "hex": "#73eff7",
+            "rgb": [
+                115,
+                239,
+                247
+            ],
+            "usage": "Special highlights, peak values"
+        },
+        {
+            "index": 12,
+            "name": "White",
+            "hex": "#f4f4f4",
+            "rgb": [
+                244,
+                244,
+                244
+            ],
+            "usage": "Backgrounds, text on dark"
+        },
+        {
+            "index": 13,
+            "name": "Light Gray",
+            "hex": "#94b0c2",
+            "rgb": [
+                148,
+                176,
+                194
+            ],
+            "usage": "Grid lines, disabled text"
+        },
+        {
+            "index": 14,
+            "name": "Gray",
+            "hex": "#566c86",
+            "rgb": [
+                86,
+                108,
+                134
+            ],
+            "usage": "Inactive elements, borders"
+        },
+        {
+            "index": 15,
+            "name": "Dark Gray",
+            "hex": "#333c57",
+            "rgb": [
+                51,
+                60,
+                87
+            ],
+            "usage": "Subtle backgrounds, dividers"
+        }
+    ],
+    "monitoring_mappings": {
+        "status_colors": {
+            "ok": 6,
+            "warning": 4,
+            "critical": 2,
+            "unknown": 1,
+            "disabled": 14,
+            "info": 9
+        },
+        "graph_colors": {
+            "primary_line": 9,
+            "secondary_line": 6,
+            "tertiary_line": 3,
+            "grid": 13,
+            "background": 12,
+            "text": 0,
+            "axis": 14
+        },
+        "ui_colors": {
+            "background": 12,
+            "panel": 15,
+            "border": 14,
+            "text_primary": 0,
+            "text_secondary": 14,
+            "highlight": 10,
+            "focus": 11
+        }
+    },
+    "fantasy_console": "TIC-80",
+    "resolution": "240x136",
+    "aspect_ratio": "16:9 (approximately)"
+}
